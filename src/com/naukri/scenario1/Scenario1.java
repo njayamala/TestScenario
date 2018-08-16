@@ -45,7 +45,8 @@ public class Scenario1 {
 		System.out.println("Alert Text is -->" +alerttext);
 		alrt.dismiss();*/
 //****************************************************************************************************//
-		driver.findElement(By.xpath("//span[@id='block']")).click();
+		driver.close();
+		
 		
 	}
 	
