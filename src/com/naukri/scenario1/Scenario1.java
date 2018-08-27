@@ -3,8 +3,6 @@ package com.naukri.scenario1;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -20,14 +18,15 @@ public class Scenario1 {
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	driver.navigate().to("https://www.naukri.com/");
 	
-//***************************To handle multiple browser***********************************//
+
 	String mainwindow=driver.getWindowHandle();
 	System.out.println("main window-->" +mainwindow);
+	
 	Set<String> allwindowhandle=driver.getWindowHandles();
 	
+	         
+	/*for(String handle:allwindowhandle)
 	
-	for(String handle:allwindowhandle)
-	{
 		
 		if(handle.equals(mainwindow))
 			continue;
@@ -37,18 +36,7 @@ public class Scenario1 {
 			String  URL=driver.switchTo().window(handle).getCurrentUrl();
 		System.out.println("Switching to window - > " + URL);
 		driver.close();
-		}
-		
-//***********************Handle Altert popup*******************************************//
-		/*Alert alrt=driver.switchTo().alert();
-		String alerttext=alrt.getText();
-		System.out.println("Alert Text is -->" +alerttext);
-		alrt.dismiss();*/
-//****************************************************************************************************//
-		driver.close();
-		
-		
+		}*/
+				
 	}
-	
-}
 }
